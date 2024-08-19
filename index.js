@@ -6,7 +6,7 @@ const port = 3000;
 app.use(express.json());
 
 // Route that logs the request body and query parameters
-app.post('/', (req, res) => {
+app.post('*', (req, res) => {
     console.log('Request Body:', req.body);
     console.log('Query Params:', req.query);
     res.sendStatus(200);
